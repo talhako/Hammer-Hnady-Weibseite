@@ -23,6 +23,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#home">Start</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews">Bewertungen</a></li>
                 </ul>
@@ -52,6 +53,45 @@
         </div>
     </section>
 
+    <!-- 360° View Section -->
+    <section id="360-view" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">360° Ansicht</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1718287397030!6m8!1m7!1sCAoSLEFGMVFpcFB4eG9Qd3FzUHRnQ0Z2cGZ1WTB2V3pVZlktRnN2LWpYb1hVYUJ6!2m2!1d47.9590719!2d14.7688464!3f0!4f0!5f0.7820865974627469" 
+                width="100%" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Galerie</h2>
+            <div id="photo-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image1.jpg" class="d-block w-100" alt="Bild 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image2.jpg" class="d-block w-100" alt="Bild 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image3.jpg" class="d-block w-100" alt="Bild 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#photo-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Vorheriges</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#photo-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Nächstes</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
@@ -67,13 +107,8 @@
                     </p>
                     <p>
                         <strong>Telefon:</strong><br>
-                        <a href="tel:+43123456789">+43 123 456789</a>
+                        <a href="tel:+436601234567">+43 660 1234567</a>
                     </p>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.324430706729!2d14.7688464!3d47.9590719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47711166b4b382c1%3A0x8a7a1ef61b4cc1d3!2sHammer%20Handy!5e0!3m2!1sde!2sat!4v1718287397030!5m2!1sde!2sat" 
-                        width="100%" 
-                        allowfullscreen>
-                    </iframe>
                 </div>
                 <div class="col-md-6">
                     <h4>Kontaktformular</h4>
@@ -87,6 +122,9 @@
                         <div class="mb-3">
                             <textarea class="form-control" rows="4" placeholder="Nachricht"></textarea>
                         </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control">
+                        </div>
                         <button type="submit" class="btn brand-color text-white">Senden</button>
                     </form>
                 </div>
@@ -98,18 +136,35 @@
     <section id="reviews" class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-4">Kundenbewertungen</h2>
-            <div id="google-reviews" class="row">
-                <!-- Google Reviews API Integration hier einfügen -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">★★★★★</h5>
-                            <p class="card-text">"Ausgezeichneter Service! Schnelle Reparatur und freundliche Beratung."</p>
-                            <p class="text-muted">- Max Mustermann</p>
+            <div id="review-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">★★★★★</h5>
+                                <p class="card-text">"Ausgezeichneter Service! Schnelle Reparatur und freundliche Beratung."</p>
+                                <p class="text-muted">- Max Mustermann</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">★★★★☆</h5>
+                                <p class="card-text">"Gute Auswahl an Zubehör, aber Reparatur dauerte etwas länger."</p>
+                                <p class="text-muted">- Anna Beispiel</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Weitere Bewertungen -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#review-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Vorheriges</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#review-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Nächstes</span>
+                </button>
             </div>
         </div>
     </section>
